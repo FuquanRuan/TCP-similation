@@ -1,0 +1,203 @@
+bash-3.2$ make runclient 
+./client localhost 25020
+
+--------------------------START 3-WAY HANDSHAKE--------------------------
+
+Send TCP Header to Server
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19208
+Acknowledgment Number: 0
+DataOffset: 5
+Reserved: 0
+Flags: syn 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+Send TCP Header Successfully
+
+Received TCP Header from Server
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 1208
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: ack syn 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 0 bytes
+
+--------------------------CONNECTION ESTABLISHED--------------------------
+
+Send TCP Header to Server
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 1209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+Send TCP Header Successfully
+
+Received TCP Header from Server
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 1209
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 5000 bytes
+
+Send TCP Header to Server
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 6209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+Send TCP Header Successfully
+
+Received TCP Header from Server
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 6209
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 5000 bytes
+
+--------------------------Ignore Package--------------------------
+
+Received TCP Header from Server
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 6209
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 5000 bytes
+
+Send TCP Header to Server
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 11209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+Send TCP Header Successfully
+
+Received TCP Header from Server
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 11209
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 2302 bytes
+
+Send TCP Header to Server
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 13511
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+Send TCP Header Successfully
+
+Received TCP Header from Server
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 13511
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: fin 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 0 bytes
+
+--------------------------CLOSING CONNECTION--------------------------
+
+Send TCP Header to Server
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 13512
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+Send TCP Header Successfully
+
+Send TCP Header to Server
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 13512
+DataOffset: 5
+Reserved: 0
+Flags: fin 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+Send TCP Header Successfully
+
+Received TCP Header from Server
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 13512
+Acknowledgment Number: 19210
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 0 bytes
+bash-3.2$ ls
+Makefile    client      client.c    read.png    readme.txt  server      server.c    tcp.h       unknown
+bash-3.2$ diff read.png unknown 
+bash-3.2$ 

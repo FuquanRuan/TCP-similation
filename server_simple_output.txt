@@ -1,0 +1,214 @@
+bash-3.2$ make clean
+rm -f server client server.o client.o
+bash-3.2$ make 
+gcc -Wall -lpthread -lsocket -lnsl server.c -o server
+gcc -Wall -lsocket -lnsl client.c -o client
+bash-3.2$ make runserver 
+./server 25020
+Create socket sucessfully
+Bind sucessfully
+Waiting for clients
+------------------------
+
+--------------------------START 3-WAY HANDSHAKE--------------------------
+
+Receive TCP Header from Client
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19208
+Acknowledgment Number: 0
+DataOffset: 5
+Reserved: 0
+Flags: syn 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+
+Send TCP Header to Client
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 1208
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: ack syn 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 0 bytes
+Send TCP Header Successfully
+
+Waiting for client's message for 1 second(s)
+
+Receive TCP Header from Client
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 1209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+
+--------------------------CONNECTION ESTABLISHED--------------------------
+number of bytes that is going to be sent 5000
+
+Send TCP Header to Client
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 1209
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 5000 bytes
+Send TCP Header Successfully
+
+Waiting for client's message for 1 second(s)
+
+Receive TCP Header from Client
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 6209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+number of bytes that is going to be sent 5000
+
+Send TCP Header to Client
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 6209
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 5000 bytes
+Send TCP Header Successfully
+
+Waiting for client's message for 1 second(s)
+
+Waiting for client's message for 2 second(s)
+
+--------------------------TIMEOUT Re-Sending--------------------------
+Send TCP Header Successfully
+
+Waiting for client's message for 1 second(s)
+
+Receive TCP Header from Client
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 11209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+number of bytes that is going to be sent 2302
+
+Send TCP Header to Client
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 11209
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 2302 bytes
+Send TCP Header Successfully
+
+Waiting for client's message for 1 second(s)
+
+Receive TCP Header from Client
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 13511
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+
+--------------------------CLOSING CONNECTION--------------------------
+
+Send TCP Header to Client
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 13511
+Acknowledgment Number: 19209
+DataOffset: 5
+Reserved: 0
+Flags: fin 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 0 bytes
+Send TCP Header Successfully
+
+Waiting for client's message for 1 second(s)
+
+Receive TCP Header from Client
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 13512
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+
+Receive TCP Header from Client
+Source Port: 36827
+Destination Port: 25020
+Sequence Number: 19209
+Acknowledgment Number: 13512
+DataOffset: 5
+Reserved: 0
+Flags: fin 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 
+
+Send TCP Header to Client
+Source Port: 25020
+Destination Port: 36827
+Sequence Number: 13512
+Acknowledgment Number: 19210
+DataOffset: 5
+Reserved: 0
+Flags: ack 
+Window: 0
+Check Sum: 0
+Urgent Pointer: 0
+Data: 0 bytes
+Send TCP Header Successfully
+Disconnecting to client 4
+
