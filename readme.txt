@@ -1,4 +1,4 @@
-This program is similation of a TCP connection. including 3-way handshake, send/recv data, and closing connection process.
+This program is simuilation of a TCP connection. including 3-way handshake, send/recv data, and closing connection process.
 
 Unix and Linux are behaving differently on linking libraries and compile files.
 Therefore, please use different make file commands in different OS.
